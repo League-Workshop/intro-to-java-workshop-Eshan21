@@ -34,7 +34,7 @@ public class DragonFight {
 			while (pATK == false) {
 
 				String player_ATK = JOptionPane.showInputDialog(null,
-						"WHICH MOVE WILL YOU USE? \n OP1: SLASH    OP2: UPPERCUT  \n  OP3:POTIONS   OP4: INFO", "P1 ATK", JOptionPane.PLAIN_MESSAGE);
+						"WHICH MOVE WILL YOU USE? \n OP1: SLASH    OP2: UPPERCUT  \n  OP3:POTIONS   OP4: RUN  \n  OP5: INFO", "P1 ATK", JOptionPane.PLAIN_MESSAGE);
 				if (player_ATK.equalsIgnoreCase("slash")) {
 					if(slashUses>0) {
 					slashUses-=1;
@@ -57,13 +57,13 @@ public class DragonFight {
 					uppercutUses-=1;
 					dragonDamage=random.nextInt(26);
 					dragonHealth= dragonHealth - dragonDamage;
-					if (dragonDamage >= 6 && dragonDamage < 10) {
+					if (dragonDamage >= 15 && dragonDamage < 24) {
 						JOptionPane.showMessageDialog(null, "ATK <UPPERCUT> WAS CRITICAL! \n DAMAGE: " + dragonDamage);
-					}else if(dragonDamage > 0 && dragonDamage < 6) {
+					}else if(dragonDamage > 0 && dragonDamage < 15) {
 						JOptionPane.showMessageDialog(null, "ATK <UPPERCUT> WAS SUCCESSFUL! \n DAMAGE: " + dragonDamage);
 					}else if(dragonDamage == 0) {
 						JOptionPane.showMessageDialog(null, "ATK <UPPERCUT> HAS FAILED! \n DAMAGE: " + dragonDamage);
-					}else if(dragonDamage == 10) {
+					}else if(dragonDamage == 25) {
 						JOptionPane.showMessageDialog(null, "ATK <UPPERCUT> WAS SUPER CRITICAL! \n DAMAGE: " + dragonDamage);
 					}
 					}else {
@@ -71,6 +71,7 @@ public class DragonFight {
 					}
 				}else if (player_ATK.equalsIgnoreCase("info")) {
 					JOptionPane.showMessageDialog(null, "ATK <SLASH> STATS: \n USES: " + slashUses + "/10 \n The <SLASH> ATK, a skill recieved \n at the start of the game dealing \n 0-10 DMG, +5 per level.", "ATK <SLASH> STATS", JOptionPane.PLAIN_MESSAGE);
+					JOptionPane.showMessageDialog(null, "ATK <UPPERCUT> STATS: \n USES: " + uppercutUses + "/10 \n The <UPPERCUT> ATK, a skill recieved \n at the start of the game dealing \n 0-25 DMG, +5 per level.", "ATK <UPPERCUT> STATS", JOptionPane.PLAIN_MESSAGE);
 				}
 			}
 
