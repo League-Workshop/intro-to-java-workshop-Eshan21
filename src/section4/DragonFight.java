@@ -67,11 +67,11 @@ public class DragonFight {
 						JOptionPane.showMessageDialog(null, "ATK <UPPERCUT> WAS SUPER CRITICAL! \n DAMAGE: " + dragonDamage);
 					}
 					}else {
-					JOptionPane.showMessageDialog(null, "ATK <SLASH> HAS RUN OUT OF USES!");
+					JOptionPane.showMessageDialog(null, "ATK <UPPERCUT> HAS RUN OUT OF USES!");
 					}
 				}else if (player_ATK.equalsIgnoreCase("info")) {
 					JOptionPane.showMessageDialog(null, "ATK <SLASH> STATS: \n USES: " + slashUses + "/10 \n The <SLASH> ATK, a skill recieved \n at the start of the game dealing \n 0-10 DMG, +5 per level.", "ATK <SLASH> STATS", JOptionPane.PLAIN_MESSAGE);
-					JOptionPane.showMessageDialog(null, "ATK <UPPERCUT> STATS: \n USES: " + uppercutUses + "/10 \n The <UPPERCUT> ATK, a skill recieved \n at the start of the game dealing \n 0-25 DMG, +5 per level.", "ATK <UPPERCUT> STATS", JOptionPane.PLAIN_MESSAGE);
+					JOptionPane.showMessageDialog(null, "ATK <UPPERCUT> STATS: \n USES: " + uppercutUses + "/5 \n The <UPPERCUT> ATK, a skill recieved \n at the start of the game dealing \n 0-25 DMG, +5 per level.", "ATK <UPPERCUT> STATS", JOptionPane.PLAIN_MESSAGE);
 				}
 			}
 
